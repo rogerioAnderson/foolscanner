@@ -1,0 +1,21 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/pref_long_press"
+        android:summary="Enable reader on long press"
+        android:title="Enable Fool Scanner mode" />
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@android:string/unknownName"
+        android:inputType="text"
+        android:key="@string/pref_fool_message"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:dependency="@string/pref_long_press"
+        android:summary="@string/pref_fool_message_summary"
+        android:title="@string/title_fake_message" />
+
+</PreferenceScreen>
